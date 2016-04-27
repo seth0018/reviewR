@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, target-densitydpi=device-dpi" />
+   
+    <title>RevieR</title>
+</head>
+
+<body>
+   
+    <div class="wrapper">
+        <section data-role="page" id="listreview" class="inactive-page">
+            <header>
+                <h2>ReviewR</h2>
+            <br/>
+            </header>
+
+            <ul>
+                </ul>
+            <i class="fa fa-plus-circle" id="btnfab" data-href="writereview"></i>
+             
+        </section>
+
+        <section data-role="page" id="writereview" class="inactive-page">
+            <header>
+                <h2><i class="fa  fa-hand-o-left back" id="back"></i>ReviewR</h2>
+                <br/>
+            </header>
+
+
+            <form>
+                <input type="text" placeholder="Title" id="title" length="40">
+                <br/>
+                <textarea placeholder="Review" id="review" length="240"></textarea>
+                <br/>
+
+                <span class="starRating">
+        <input id="rating5" type="radio" name="rating" value="5">
+        <label for="rating5">5</label>
+        <input id="rating4" type="radio" name="rating" value="4">
+        <label for="rating4">4</label>
+        <input id="rating3" type="radio" name="rating" value="3" checked>
+        <label for="rating3">3</label>
+        <input id="rating2" type="radio" name="rating" value="2">
+        <label for="rating2">2</label>
+        <input id="rating1" type="radio" name="rating" value="1">
+        <label for="rating1">1</label>
+      </span>
+                <br/>
+                <i class="fa fa-camera" id="camera"></i>
+                <br/>
+                <i class="fa fa-times-circle" id="close"></i>
+                <i class="fa fa-check-circle" id="check"></i>
+            </form>
+
+
+        </section>
+
+
+        <section data-role="page" id="readreview">
+            <header>
+                <h2><i class="fa  fa-hand-o-left back" id="readback"></i>ReviewR</h2>
+                <br/>
+            </header>
+
+            <label placeholder="title" id="fetchedtitle"></label>
+            <br/>
+            <textarea readonly id="fetchedreview"></textarea>
+            <br/>
+            <img id="displayrate">
+            <br/>
+            <img id="displayimg" height=500px width=500px/>
+            <br/>
+            <i class="fa fa-check-circle" id="checkreview"></i>
+
+        </section>
+    </div>
+   
+</body>
+<script type="text/javascript" src="cordova.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+<script type="text/javascript" src="js/hammer.min.js"></script>
+
+</html>
